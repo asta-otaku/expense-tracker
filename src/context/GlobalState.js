@@ -3,9 +3,9 @@ import AppReducer from './AppReducer'
 import getCountInStorage from './StoreTransactions'
 
 //Intial state
-let ls = getCountInStorage()
+let prevTransactions = getCountInStorage()
 const intialState = {
-    transactions: ls
+    transactions: prevTransactions
 }
 
 //Create context
