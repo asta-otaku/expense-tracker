@@ -17,6 +17,7 @@ export default function AddTransaction() {
     }
 
     addTransaction(newTransaction)
+    localStorage.setItem("TRANSACTIONS",JSON.stringify(newTransaction))
   }
 
   return (

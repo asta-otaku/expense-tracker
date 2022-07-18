@@ -1,10 +1,11 @@
 import React, { createContext, useReducer} from 'react'
 import AppReducer from './AppReducer'
+import getCountInStorage from './StoreTransactions'
 
 //Intial state
+let ls = getCountInStorage()
 const intialState = {
-    transactions: [
-        ]
+    transactions: ls
 }
 
 //Create context
