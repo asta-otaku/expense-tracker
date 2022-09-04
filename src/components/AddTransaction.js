@@ -5,20 +5,19 @@ export default function AddTransaction() {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
 
-  let {addTransaction} = useContext(GlobalContext)
+  let { addTransaction } = useContext(GlobalContext);
 
-  const onSubmit = e => {
-    e.preventDefault()
+  const onSubmit = (e) => {
+    e.preventDefault();
 
     const newTransaction = {
-      id: Math.floor(Math.random()* 1000000000),
+      id: Math.floor(Math.random() * 1000000000),
       text,
-      amount: + amount
-    }
+      amount: +amount,
+    };
 
-    addTransaction(newTransaction)
-    // localStorage.setItem("TRANSACTIONS",JSON.stringify(newTransaction))
-  }
+    addTransaction(newTransaction);
+  };
 
   return (
     <>
